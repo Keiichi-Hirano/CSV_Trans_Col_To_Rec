@@ -3,6 +3,7 @@
 # vim:fenc=utf-8
 #! /usr/bin/env python
 # csvファイル読み込みライブラリをImport
+import os
 import csv
 
 def trance(I_files,O_files):
@@ -57,8 +58,8 @@ def main():
 # O_file = 'C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest_output.csv'
 # trance(I_file,O_file)
 
- I_file = "C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest.csv"
- O_file = 'C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest_output.csv'
+ I_file = "C:/TransFiles/input.csv"
+ O_file = 'C:/TransFiles/output.csv'
  trance(I_file,O_file)
 
 if __name__ == '__main__':
