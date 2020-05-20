@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# vim:fenc=utf-8
+# vim:fenc=utf-8 
 #! /usr/bin/env python
 # csvファイル読み込みライブラリをImport
 import os
