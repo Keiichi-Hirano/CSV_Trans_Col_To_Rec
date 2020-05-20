@@ -22,14 +22,6 @@ def trance(I_files, O_files, begin, column, repeat):
         with open(O_files, 'w' ,encoding="utf-8_sig") as fo:
                 writer = csv.writer(fo, lineterminator='\n')
 #       入力ファイルを読み込み、レコード分繰り返し
-#+---------+---------+---------                 
-#       入力ファイルを文字コードutf8で開く 
-        f = open(I_files, 'r',encoding="utf-8_sig")
-        reader = csv.reader(f)
-#       出力ファイルを文字コードutf8で開く 
-        fo = open(O_files, 'w',encoding="utf-8_sig")
-        writer = csv.writer(fo, lineterminator='\n')
-#       入力ファイルを読み込み、レコード分繰り返し 
         for i, row in enumerate(reader):
 #               最初のレコードをHeaderとして処理 
                 if i == 0:
@@ -61,7 +53,6 @@ def trance(I_files, O_files, begin, column, repeat):
 
 def writeing(writer, new, row, start, column, begin):
 #+---------+---------+---------                
-=======
 # 開始位置(start)、列数(column)をもとにレコード(row)から
 # 列のデータを取得し、先頭列（row[0:begin]）と併せて
 # 出力ファイル(writer)に出力を行う
@@ -72,6 +63,7 @@ def writeing(writer, new, row, start, column, begin):
         writer.writerow(new) 
 
 def main():
+<<<<<<< HEAD
 #       I_file = "C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest.csv"
 #       O_file = 'C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest_output.csv'
 #       trance(I_file,O_file)
