@@ -16,11 +16,11 @@ def trance(I_files, O_files, begin, column, repeat):
 # repeat :      列→行変換を繰り返す回数
 #+---------+---------+---------                
 #       入力ファイルを文字コードutf8で開く
-        with open(I_files, 'r' ,encoding="utf-8_sig") as f:
-                reader = csv.reader(f)
+        f = open(I_files, 'r' ,encoding="utf-8_sig")
+        reader = csv.reader(f)
 #       出力ファイルを文字コードutf8で開く
-        with open(O_files, 'w' ,encoding="utf-8_sig") as fo:
-                writer = csv.writer(fo, lineterminator='\n')
+        fo =  open(O_files, 'w' ,encoding="utf-8_sig")
+        writer = csv.writer(fo, lineterminator='\n')
 #       入力ファイルを読み込み、レコード分繰り返し
         for i, row in enumerate(reader):
 #               最初のレコードをHeaderとして処理 
@@ -38,9 +38,6 @@ def trance(I_files, O_files, begin, column, repeat):
 #               列→行変換を指定回数分実施する。
 #                for _ in range(repeat):
                 while start < len(row):
-#               移動する列項目数を設定 
-#               列→行変換を指定回数分実施する。 
-                for _ in range(repeat):
 #               start列目からColumn列分をrange回数分繰り返して
 #               列を行に変換して出力する。        
                         writeing(writer,new,row,start,column,begin)
@@ -63,7 +60,6 @@ def writeing(writer, new, row, start, column, begin):
         writer.writerow(new) 
 
 def main():
-<<<<<<< HEAD
 #       I_file = "C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest.csv"
 #       O_file = 'C:/Users/js0059/OneDrive - Coca-Cola Bottlers Japan/ドキュメント/APRILtest_output.csv'
 #       trance(I_file,O_file)
